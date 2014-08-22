@@ -25,11 +25,6 @@ var paths = {
     'bower_components/barekit/css/barekit.scss']
 };
 
-gulp.task('init', function(cb) {
-  // You can use multiple globbing patterns as you would with `gulp.src`
-  del(['dist'], cb);
-});
-
 
 gulp.task('clean', function(cb) {
   // You can use multiple globbing patterns as you would with `gulp.src`

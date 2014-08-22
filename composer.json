@@ -3,5 +3,5 @@
     "name": "Responsive-Demo",
     "dependencies": {
     },
-    "nginx-includes": [".nginx.conf"]
+    "nginx-includes": ["./.nginx.conf"]
 }

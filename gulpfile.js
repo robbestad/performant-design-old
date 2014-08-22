@@ -10,19 +10,26 @@ var sourcemaps = require('gulp-sourcemaps');
 var del = require('del');
 var notify = require("gulp-notify");
 var pngcrush = require('imagemin-pngcrush');
+var rename = require('gulp-rename');
 
 
 var paths = {
-  scripts: ['bower_components/jquery/dist/jquery.js', 'bower_components/barekit/js/barekit.min.js', 'dev/js/**/*.js'],
+    //'bower_components/jquery/dist/jquery.js'
+  scripts: ['bower_components/jquery/dist/jquery.js',
+    'bower_components/barekit/js/barekit.min.js',
+    'bower_components/stickUp/stickUp.min.js',
+    'dev/js/**/*'],
   images: 'dev/images/**/*',
   html: 'dev/html/**/*',
-  scss: ['dev/scss/main.scss', 'bower_components/barekit/css/barekit.scss']
+  scss: ['dev/scss/main.scss',
+    'bower_components/barekit/css/barekit.scss']
 };
 
 gulp.task('init', function(cb) {
   // You can use multiple globbing patterns as you would with `gulp.src`
   del(['dist'], cb);
 });
+
 
 gulp.task('clean', function(cb) {
   // You can use multiple globbing patterns as you would with `gulp.src`
@@ -35,12 +42,19 @@ gulp.task('htmlcat', function(){
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('prettify', function(){
-    return gulp.src('html/**/*')
+gulp.task('prettifyhtml', function(){
+    return gulp.src(paths.html)
     .pipe(prettify())
-    .pipe(notify("Created index.html"))
+    .pipe(gulp.dest('dev/html'))
+/*    .pipe(notify("Prettified index.html")); */
+});
 
-    .pipe(gulp.dest('html/**/*'));
+gulp.task('prettifyscss', function(){
+    return gulp.src('dev/scss/**/*')
+    .pipe(prettify({
+        preserve_newlines: true
+    }))
+    .pipe(gulp.dest('dev/scss'))
 });
 
 gulp.task('sass', function() {
@@ -57,7 +71,7 @@ gulp.task('csscat', ['sass'], function() {
   .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('uglifyjs', ['sass'], function() {
+gulp.task('uglifyjs', function() {
   return gulp.src(paths.scripts)
   .pipe(uglify())
   .pipe(concat('scripts.min.js'))
@@ -70,9 +84,9 @@ gulp.task('scripts', function() {
   return gulp.src(paths.scripts)
     .pipe(sourcemaps.init())
     .pipe(uglify())
-    .pipe(concat('all.min.js'))
+    .pipe(concat('scripts.min.js'))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest('dist/js'));
 });
 
 // Copy all static images
@@ -90,12 +104,12 @@ gulp.task('images', function() {
 
 // Rerun the task when a file changes
 gulp.task('watch', function() {
-  gulp.watch(paths.scripts, ['scripts','clean']);
-  gulp.watch(paths.scss, ['csscat','clean']);
-  gulp.watch(paths.html, ['htmlcat','clean']);
-  gulp.watch(paths.images, ['images','clean']);
+  gulp.watch(paths.scripts, ['uglifyjs']);
+  gulp.watch('dev/scss/**/*', ['csscat']);
+  gulp.watch(paths.html, ['htmlcat','prettifyhtml']);
+  gulp.watch(paths.images, ['images']);
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['watch', 'scripts', 'htmlcat', 'csscat','uglifyjs', 'images']);
+gulp.task('default', ['watch', 'prettifyhtml', 'htmlcat', 'csscat','uglifyjs', 'images']);
 

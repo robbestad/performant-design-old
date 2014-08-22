@@ -13,8 +13,7 @@ var pngcrush = require('imagemin-pngcrush');
 
 
 var paths = {
-  _scripts: ['bower_components/zepto/zepto.js', 'bower_components/barekit/js/barekit.min.js', 'js/**/*.js'],
-  scripts: ['bower_components/jquery/dist/jquery.js', 'bower_components/barekit/js/barekit.min.js', 'js/**/*.js'],
+  scripts: ['bower_components/jquery/dist/jquery.js', 'bower_components/barekit/js/barekit.min.js', 'dev/js/**/*.js'],
   images: 'dev/images/**/*',
   html: 'dev/html/**/*',
   scss: ['dev/scss/main.scss', 'bower_components/barekit/css/barekit.scss']

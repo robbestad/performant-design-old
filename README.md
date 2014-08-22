@@ -12,7 +12,7 @@ Deploy the _dist_ folder:
 
     git subtree push --prefix dist heroku master
 
-If you don't have subtree installed, execute the following commands:
+If you don't have subtree installed (in case you're running an old version of git), execute the following commands:
 
     git clone git://github.com/apenwarr/git-subtree.git
     cd git-subtree

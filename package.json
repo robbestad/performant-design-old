@@ -25,5 +25,9 @@
     "gulp-sourcemaps": "^1.1.1",
     "gulp-uglify": "^0.3.1",
     "imagemin-pngcrush": "^0.1.0"
-  }
+  },
+  "scripts": {
+      "postinstall": "bower install && gulp"
+   }
+
 }

@@ -163,5 +163,33 @@ h1{
   }
 }
 
+.footer {
+  background: #282829;
+  color: #fff;
+  width: 100%;
+  position: fixed;
+  bottom:0;
+  left:0;
+}
+.footer{
+  font-size:.6em;
+  padding: 4px;
+  line-height:1.1em
+}
+
+@media (min-width: 50em){
+    .footer p{
+      font-size:0.6em;
+    }
+}
+.footer a{
+  color:#fbd261;
+  text-decoration:none;
+}
+.footer a:hover{
+  color:#f6c645;
+}
+
+
 
 @import 'animate';

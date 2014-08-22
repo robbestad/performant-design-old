@@ -10,7 +10,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var del = require('del');
 var notify = require("gulp-notify");
 var pngcrush = require('imagemin-pngcrush');
-var rename = require('gulp-rename');
+//var rename = require('gulp-rename');
 
 
 var paths = {

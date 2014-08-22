@@ -98,5 +98,5 @@ gulp.task('watch', function() {
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['watch', 'init', 'scripts', 'htmlcat', 'csscat','uglifyjs', 'images']);
+gulp.task('default', ['watch', 'scripts', 'htmlcat', 'csscat','uglifyjs', 'images']);
 

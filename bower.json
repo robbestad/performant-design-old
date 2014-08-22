@@ -22,8 +22,8 @@
   "dependencies": {},
   "devDependencies": {
     "barekit": "~0.5.0",
-    "zepto": "~1.1.4",
     "animate.css": "~3.2.0",
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "stickUp": "~0.5.7"
   }
 }

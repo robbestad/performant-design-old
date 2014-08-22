@@ -37,13 +37,6 @@ gulp.task('htmlcat', function () {
         .pipe(gulp.dest('build'));
 });
 
-gulp.task('prettifyhtml', function () {
-    return gulp.src(paths.html)
-        .pipe(prettify())
-        .pipe(gulp.dest('dev/html'))
-    /*    .pipe(notify("Prettified index.html")); */
-});
-
 
 gulp.task('sass', function () {
     return gulp.src(paths.scss)
@@ -93,6 +86,5 @@ gulp.task('watch', function () {
 });
 
 // The default task (called when you run `gulp` from cli)
-// 'prettifyhtml',
 gulp.task('default', ['watch', 'htmlcat', 'csscat', 'uglifyjs', 'images']);
 

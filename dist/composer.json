@@ -1,3 +1,7 @@
 {
-  "nginx-includes": [".nginx.conf"]
+    "author": "Sven Anders Robbestad",
+    "name": "Responsive-Demo",
+    "dependencies": {
+    }
+    "nginx-includes": [".nginx.conf"]
 }

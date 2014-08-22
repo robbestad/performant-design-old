@@ -3,5 +3,9 @@
     "name": "Responsive-Demo",
     "dependencies": {
     },
-    "nginx-includes": ["./.nginx.conf"]
+    "extra": {
+         "heroku": {
+            "nginx-includes": ["./.nginx.conf"]
+          }
+     }
 }

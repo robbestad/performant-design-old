@@ -13,9 +13,10 @@
 
   <body>
     <div class="masthead">
-      <a href="#">
-        <img src="./img/logo.svg" alt="Logo" class="logo animated zoomIn">
-      </a>
+      <h1 class="logo animated zoomIn">Responsive</h1>
+      <!--<a href="#">-->
+      <!--<img src="./img/logo.svg" alt="Logo" class="logo animated zoomIn">-->
+      <!--</a>-->
     </div>
     <div class="content">
       <div class="row">
@@ -35,17 +36,17 @@
           </ul>
         </div>
       </section>
+      <div class="clearfix">&NonBreakingSpace;</div>
       <div class="row mainRow">
-        <div class="lg-3 sm-12 md-12">Web design is not all about creating good looking pages, but it's also about creating a snappy system that doesn't require the user to wait longer than necessary before the page loads.</div>
-        <div class="lg-8 lg-offset-1 sm-12 md-12">
-          <p class="topMargin">In this demo, I'm testing a combination of BareKit and jQuery. BareKit is a promising new CSS framework that is comparable to Bootstrap in many respects. The implementation is tiny though, so you do loose a lot of the functionality that makes
-            Bootstrap so attractive.</p>
-          <p class="topMargin">However, there's no need to serve components that you do not utilize, so if you can implement everything you want in a restrictive framework, both you and your users an benefit greatly.</p>
+        <div class="lg-4 sm-12 md-12 standout bottomMargin">Web design is not all about creating good looking pages, but it's also about creating a snappy system that doesn't require the user to wait longer than necessary before the page loads.</div>
+        <div class="lg-8 sm-12 md-12">
+          <p class="">BareKit is a promising new CSS framework that is comparable to Bootstrap in many respects, though it lacks many of the features and functionality that makes Bootstrap attractive.</p>
+          <p class="topPadding">However, if you can implement everything you want in a restrictive framework, both you and your users can benefit greatly.</p>
           </p>
         </div>
       </div>
       <!-- /mainRow -->
-      <div class="topMargin">&NonBreakingSpace;</div>
+      <div class="topPadding clearfix"></div>
       <!-- features -->
       <ul class="features no-bullets">
         <li class="sm-12 md-4 lg-4">
@@ -57,13 +58,13 @@
         <li class="sm-12 md-4 lg-4">
           <div class="row feature text-center">
             <h5>Sass &amp; Autoprefixer</h5>
-            <p class="feature-text">All CSS-kode på denne siden er skrevet i SASS. All prefix-kode omgjøres automatisk med gulp-autoprefixer.</p>
+            <p class="feature-text">The CSS code on this page is written in SASS. The Gulp build system automatically creates all prefixes on the fly for compatibility with all browsers.</p>
           </div>
         </li>
         <li class="sm-12 md-4 lg-4">
           <div class="row feature text-center">
-            <h5>Rutenett</h5>
-            <p class="feature-text">Som Bootstrap er siden bygget opp som et rutenett. Disse rubrikkene har 4 ruter i stor og mellomstor størrelse, og 12 i liten størrelse.</p>
+            <h5>Grid</h5>
+            <p class="feature-text">Grids has proven to be a very capable way of designing web pages. BareKit provides a flexible grid that makes setting up pages a breeze.</p>
           </div>
         </li>
       </ul>

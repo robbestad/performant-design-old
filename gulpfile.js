@@ -50,11 +50,11 @@ gulp.task('sass', function () {
         .pipe(scss())
         .pipe(autoprefixer())
         .pipe(cssmin())
-        .pipe(gulp.dest('build/css'));
+        .pipe(gulp.dest('dev/css'));
 });
 
 gulp.task('csscat', ['sass'], function () {
-    return gulp.src('build/css/**/*')
+    return gulp.src('dev/css/**/*')
         .pipe(concat('style.min.css'))
         .pipe(gulp.dest('dist/css'))
         .pipe(gulp.dest('build/css'));
@@ -88,7 +88,7 @@ gulp.task('images', function () {
 gulp.task('watch', function () {
     gulp.watch(paths.scripts, ['uglifyjs']);
     gulp.watch('dev/scss/**/*', ['csscat']);
-    gulp.watch(paths.html, ['htmlcat', 'prettifyhtml']);
+    gulp.watch(paths.html, ['htmlcat']);
     gulp.watch(paths.images, ['images']);
 });
 

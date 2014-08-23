@@ -192,8 +192,13 @@ h1{
     height:100%;
     left:0;
     top:50%;
-    background: white;
     border:0;
+    border-radius: 0;
+    background: white;
+  }
+
+  .modal-close{
+    z-index:9999;
   }
 }
 

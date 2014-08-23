@@ -31,8 +31,13 @@ jQuery(function ($) {
                 self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
         ];
         $(".masthead").css("opacity",0);
-        $(".content").css("opacity",0);
+        $(".row").css("opacity",0);
+        $(".nav").css("opacity",0);
+
         $("html").css("position","fixed");
+        $(".modal-close").css("zIndex","9999");
+//        $("#modal").css("opacity",1);
+
     });
 
     $(".modal-close").on('click',function(){
@@ -40,7 +45,9 @@ jQuery(function ($) {
         window.scrollTo(scrollPosition[0], scrollPosition[1]);
         $("body").css("opacity",1);
         $(".masthead").css("opacity",1);
-        $(".content").css("opacity",1);
+        $(".row").css("opacity",1);
+        $(".nav").css("opacity",1);
+//        $("#modal").css("opacity",0);
 
     });
 

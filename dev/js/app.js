@@ -21,10 +21,14 @@ jQuery(function ($) {
     });
 
     $(".modal-event").on('click',function(){
-        console.log($(this).attr("src"));
         $(".modal-img").attr("src", $(this).attr("src"));
-
+        //$("html").css("overflow","hidden");
     });
+
+//    $(".modal-close").on('click',function(){
+//        $("html").css("overflow","visible");
+//    });
+
 
     $(window).bind('load', function () {
         parallaxInit();

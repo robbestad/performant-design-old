@@ -109,6 +109,12 @@
         <h2>Automation</h2>
 
     </div>
+
+    <div class="modal" id="modal">
+        <a href="#" class="modal-close right">Close</a>
+            <img class="modal-img lg-12 md-12 sm-12" src="#" alt="Gulp automation"/>
+    </div>
+
     <div class="clearfix"></div>
     <div class=" lg-6 md-12 sm-12">
         <h4>Automate everything</h4>
@@ -119,7 +125,9 @@
             manually copying things around everytime you want to deploy.</p>
     </div>
     <div class=" lg-6 md-12 sm-12">
-        <img class="lg-12 md-12 sm-12" src="img/gulp.png" alt="Gulp automation"/>
+        <a href="#" class="modal-trigger" data-options='{ "modalId": "modal" }'>
+            <img class="modal-event lg-12 md-12 sm-12" src="img/gulp.png" alt="Gulp automation"/>
+        </a>
     </div>
 
     <div class="clearfix"></div>
@@ -148,9 +156,15 @@
         <h4>Design your webpages for speed</h4>
 
     </div>
+
     <div class="clearfix"></div>
     <div class=" lg-6 md-12 sm-12">
-        <img class="lg-12 md-12 sm-12" src="img/yslow.png" alt="ySlow measurement"/>
+
+        <a href="#" class="modal-trigger" data-options='{ "modalId": "modal" }'>
+            <img class="modal-event lg-12 md-12 sm-12" src="img/yslow.png" alt="ySlow result"/>
+        </a>
+
+
     </div>
     <div class=" lg-6 md-12 sm-12">
         <p class="clearfix">Use measurement tools like Yahoo's ySlow to find areas of your webpage that is lacking.
@@ -174,6 +188,9 @@
     <div class="lg-12 md-12 sm-12">
         <h2>Source</h2>
         <h4>Get the source code</h4>
+        <p class="clearfix">
+            The source code is available on my Github page.
+        </p>
 
     </div>
     <div class="clearfix"></div>
@@ -183,9 +200,9 @@
         </p>
     </div>
     <div class="lg-7 lg-offset-1 md-6 sm-6">
-        <p class="clearfix">
-            The source code is available on my Github page.
-        </p>
+        <!--<p class="clearfix">-->
+            <!--The source code is available on my Github page.-->
+        <!--</p>-->
     </div>
 
     <div class="lg-12 md-12 sm-12">
@@ -194,15 +211,15 @@
             Get up and running with these simple steps:
 
             <br/><br/><strong>Build</strong><br/>
-        Open a terminal and clone the repo.
-        <br/>run 'npm install'
-        <br/>run 'gulp'
+            Open a terminal and clone the repo.
+            <br/>run 'npm install'
+            <br/>run 'gulp'
 
 
             <br/><br/><strong>Workflow</strong><br/>
-        Do all your work in dev.
-        <br/>Monitor & build by executing 'gulp'.
-        <br/>Distribute the 'dist' folder
+            Do all your work in dev.
+            <br/>Monitor & build by executing 'gulp'.
+            <br/>Distribute the 'dist' folder
         </p>
     </div>
 

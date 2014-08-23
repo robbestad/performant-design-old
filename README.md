@@ -1,8 +1,18 @@
-# Parallax
+# Responsive App with BareKit 
 
-Do all your work in dev. Distribute the 'dist' folder
+A HTML app using the CSS framework BareKit and Gulp for workflow.
 
-# Deploy on Heroku
+## Build
+
+   Clone the repo.
+   *npm install* 
+   *gulp*
+
+## Workflow
+
+Do all your work in dev. Monitor & build by executing _gulp_. Distribute the 'dist' folder
+
+## Deploy on Heroku
 
 Add the following buildpack:
 

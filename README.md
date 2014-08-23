@@ -2,6 +2,8 @@
 
 A HTML app using the CSS framework BareKit and Gulp for workflow.
 
+[Live Demo](http://barekit.herokuapp.com/ "Barekit") of the app.
+
 ## Build
 
    Clone the repo.

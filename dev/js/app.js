@@ -26,17 +26,21 @@ jQuery(function ($) {
 
     $(".modal-event").on('click',function(){
         $(".modal-img").attr("src", $(this).attr("src"));
-        $("html").css("position","fixed");
         scrollPosition = [
                 self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
                 self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
         ];
+        $(".masthead").css("opacity",0);
+        $(".content").css("opacity",0);
+        $("html").css("position","fixed");
     });
 
     $(".modal-close").on('click',function(){
-//        $("html").css("overflow","visible");
         $("html").css("position","relative");
         window.scrollTo(scrollPosition[0], scrollPosition[1]);
+        $("body").css("opacity",1);
+        $(".masthead").css("opacity",1);
+        $(".content").css("opacity",1);
 
     });
 

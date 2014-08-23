@@ -5,6 +5,10 @@
 //initiating jQuery
 jQuery(function ($) {
 
+    var scrollPosition = [
+            self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+            self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
+    ];
 
     (setNavbar = function () {
         $(".navbar ul>li").css("width", ($(".content").width() / 3) - 2 + "px");
@@ -22,12 +26,19 @@ jQuery(function ($) {
 
     $(".modal-event").on('click',function(){
         $(".modal-img").attr("src", $(this).attr("src"));
-        //$("html").css("overflow","hidden");
+        $("html").css("position","fixed");
+        scrollPosition = [
+                self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+                self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
+        ];
     });
 
-//    $(".modal-close").on('click',function(){
+    $(".modal-close").on('click',function(){
 //        $("html").css("overflow","visible");
-//    });
+        $("html").css("position","relative");
+        window.scrollTo(scrollPosition[0], scrollPosition[1]);
+
+    });
 
 
     $(window).bind('load', function () {

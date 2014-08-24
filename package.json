@@ -1,10 +1,14 @@
 {
-  "name": "robcom-parallax-demo",
-  "version": "0.0.1",
-  "description": "Parallax Demo",
+  "name": "gulp-barekit-responsive",
+  "version": "1.0.0",
+  "description": "Responsive Design with BareKit",
   "main": "gulpfile.js",
   "scripts": {
     "postinstall": "bower install && gulp"
+  },
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/svenanders/gulp-barekit-responsive.git"
   },
   "keywords": [
     "parallax",

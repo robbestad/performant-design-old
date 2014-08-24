@@ -142,13 +142,13 @@ h1{
   padding:5px;
 }
 
-.modal{
+.modal {
   overflow: hidden;
-  width: 80%;
-  height:80%;
+  width: 99.9%;
+  height: 99.9%;
   background: white;
-  border-radius:10px;
-  border:2px solid gray;
+  border-radius: 2px;
+  border: 2px solid gray;
 }
 .modal-close{
   margin:10px;
@@ -168,17 +168,19 @@ h1{
   }
 
   .masthead{
-    top: 0;
-    left: 0;
-    padding: 0;
-    height:0;
-    visibility: none;
-    display:none;
+//    top: 0;
+//    left: 0;
+//    padding: 0;
+//    height:0;
+//    visibility: none;
+//    display:none;
+  width: 100%;
+  overflow: hidden;
   }
   .content {
     padding: 0px 20px;
     position: relative;
-    top: 0;
+//    top: 0;
     background-color: white;
   }
   h1{

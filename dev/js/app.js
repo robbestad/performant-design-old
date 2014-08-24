@@ -47,16 +47,21 @@ jQuery(function ($) {
     });
 
 
-    $(window).bind('load', function () {
+
+    $(document).ready(function () {
+
+        $(window).bind('load', function () {
+            parallaxInit();
+        });
+        var headerParallax = jQuery('.masthead');
+
+        function parallaxInit() {
+            headerParallax.parallax("50%", 1);
+        }
+
         parallaxInit();
     });
-    var headerParallax = jQuery('.masthead');
 
-    function parallaxInit() {
-        headerParallax.parallax("50%", 1);
-    }
-
-    parallaxInit();
 
 
 });

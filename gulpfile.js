@@ -8,6 +8,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var imagemin = require('gulp-imagemin');
 var sourcemaps = require('gulp-sourcemaps');
 var del = require('del');
+var webserver = require('gulp-webserver');
 var notify = require("gulp-notify");
 var pngcrush = require('imagemin-pngcrush');
 //var rename = require('gulp-rename');
@@ -37,6 +38,15 @@ gulp.task('htmlcat', function () {
         .pipe(gulp.dest('build'));
 });
 
+gulp.task('webserver', function() {
+    gulp.src('dist')
+        .pipe(webserver({
+            livereload: true,
+            path: 'dist',
+            directoryListing: false,
+            open: true
+        }));
+});
 
 gulp.task('sass', function () {
     return gulp.src(paths.scss)
@@ -86,5 +96,5 @@ gulp.task('watch', function () {
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['watch', 'htmlcat', 'csscat', 'uglifyjs', 'images']);
+gulp.task('default', ['watch', 'htmlcat', 'csscat', 'uglifyjs', 'images', 'webserver']);
 

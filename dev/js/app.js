@@ -33,6 +33,7 @@ jQuery(function ($) {
         $(".masthead").css("opacity",0);
         $(".row").css("opacity",0);
         $(".nav").css("opacity",0);
+        $(".modal-img").css("maxHeight", document.documentElement.clientHeight+"px");
         $("html").css("position","fixed");
         $(".modal-close").css("zIndex","9999");
         $(".modal-img").css("opacity",1);

@@ -35,6 +35,7 @@ jQuery(function ($) {
         $(".nav").css("opacity",0);
         $("html").css("position","fixed");
         $(".modal-close").css("zIndex","9999");
+        $(".modal-img").css("opacity",1);
     });
 
     $(".modal-close").on('click',function(){
@@ -44,8 +45,9 @@ jQuery(function ($) {
         $(".masthead").css("opacity",1);
         $(".row").css("opacity",1);
         $(".nav").css("opacity",1);
+        $(".modal-img").css("opacity",0);
+        closeModal();
     });
-
 
 
     $(document).ready(function () {

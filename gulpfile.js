@@ -16,7 +16,6 @@ var pngcrush = require('imagemin-pngcrush');
 
 var paths = {
     scripts: ['bower_components/jquery/dist/jquery.js',
-        'bower_components/barekit/js/barekit.min.js',
         'bower_components/stickUp/stickUp.min.js',
         'dev/js/**/*'],
     images: 'dev/img/**/*',

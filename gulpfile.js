@@ -44,6 +44,7 @@ gulp.task('webserver', function() {
             livereload: true,
             path: 'dist',
             directoryListing: false,
+            port: 8084,
             open: true
         }));
 });

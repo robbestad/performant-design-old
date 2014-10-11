@@ -9,7 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Responsive Performant Design</title>
-
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./css/style.min.css">
 
 </head>
 
@@ -202,19 +203,6 @@
 
 </div>
 </body>
-<link async href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-
-<script>
-      var cb = function() {
-        var l = document.createElement('link'); l.rel = 'stylesheet';
-        l.href = './css/style.min.css';
-        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-      };
-      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-          webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(cb);
-      else window.addEventListener('load', cb);
-    </script>
-<script async type="text/javascript" src="./js/scripts.min.js"></script>
+<script type="text/javascript" src="./js/scripts.min.js"></script>
 
 </html>
